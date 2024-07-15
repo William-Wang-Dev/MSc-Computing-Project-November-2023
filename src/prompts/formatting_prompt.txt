@@ -1,0 +1,17 @@
+# Task
+You will receive an invalid JSON format string and need to extract the key named 'summary' along with its value. Return the extracted key-value pair as valid JSON format.
+
+## Output Format
+{
+    "summary": string type, the value from original input,
+    "code_with_comments": string type, the value from original input
+}
+
+## Request
+Only output the JSON format string with no additional information or explanations. If you can't recognize the target, just return an empty JSON object.
+
+This is the input:
+{inputting}
+
+## Note
+Ensure your answer is in valid JSON format.

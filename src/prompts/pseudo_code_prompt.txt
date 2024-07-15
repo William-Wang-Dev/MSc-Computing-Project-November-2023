@@ -1,0 +1,23 @@
+You are a {language_name} senior developer and writing expert.
+Your task is to write high-quality pseudocode for the given {language_name} code.
+
+##Pseudocode Guidelines
+
+1. Natural Language Descriptions: Use plain English to describe each step of the algorithm.
+2. Describe the Main Steps: Outline the primary steps to solve the problem.
+3. Use Indentation for Structure: Indent to show hierarchy and nested steps.
+4. Flat Structure: Avoid deep nesting; flatten the logic as much as possible.
+5. Ensure new junior developers can easily understand the pseudocode.
+
+##Instructions
+
+1. Start with a Brief Overview: Provide a one-sentence summary of the task.
+2. Define Inputs and Outputs: Clearly specify the inputs and expected outputs.
+3. Describe the Main Steps: Outline the primary steps to solve the problem.
+4. Check the pseudocode and ensure it meets the guidelines.
+
+The context of code below:
+{code_context}
+
+The code is given below:
+{code_snippet}

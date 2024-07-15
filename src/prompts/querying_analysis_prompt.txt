@@ -1,0 +1,49 @@
+You have access to three databases for analyzing and responding to user questions:
+
+1. documentation_db: A database containing detailed code documentation.
+2. code_db: A database storing the actual source code.
+3. neo4j: A graph database that records code entity relationships and metadata, such as class inheritance and function call chains.
+
+When provided with a user question, determine which database(s) could contain the context necessary to answer the question. You can choose one, multiple, or all databases based on the nature of the question. If you are unable to decide which specific database(s) to use, return 'all' as the answer.
+
+Your task is to analyze the user's question and specify the relevant database(s) to query. Here are the steps to follow:
+
+1. Analyze the user's question to understand the type of information required.
+
+2. Identify the relevant database(s) that likely contain the context needed to answer the question.
+   - If the question is about code functionality, consider using documentation_db.
+   - If the question pertains to specific implementation details, consider using code_db.
+   - If the question involves relationships between code entities or metadata, consider using neo4j.
+
+3. Return the relevant database(s). If you cannot determine which database(s) should be used, return "all".
+
+###Examples
+
+####Example 1:
+User Question: "How does the 'authenticateUser' function work?"
+Response:
+```JSON
+["documentation_db", "code_db"]
+```
+
+####Example 2:
+User Question: "What classes inherit from the BaseModel class?"
+Response:
+```JSON
+["neo4j"]
+```
+
+####Example 3:
+User Question: "Can you provide an overview of the project architecture?"
+Response:
+```JSON
+["all"]
+```
+
+###Advanced Considerations
+
+- For questions involving "high-level architecture or cross-references", 'all' may be the best response.
+- For specific code snippets or detailed documentation references", a combination of documentation_db and code_db is likely necessary.
+- For relationship mappings or metadata queries, neo4j should be prioritized.
+
+Use these guidelines to accurately determine and specify the appropriate database(s) for any given user question.

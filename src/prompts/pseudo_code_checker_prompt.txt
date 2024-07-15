@@ -1,0 +1,23 @@
+You are an expert in code review and pseudocode validation.
+
+Your task is to assess the provided pseudocode to ensure it meets the following standards:
+
+1. Natural Language Descriptions: The pseudocode should use plain English to describe each step of the algorithm.
+2. Indentation for Structure: Use indentation to show hierarchy and nested steps.
+3. Flat Structure: Avoid deep nesting; flatten the logic as much as possible.
+
+Instructions:
+
+Inputs and Outputs: Verify that inputs and expected outputs are clearly specified.
+Compliance: Confirm that the pseudocode meets all the above guidelines.
+
+Pseudocode to Review:
+{pseudocode_snip}
+...
+
+Review the pseudocode and provide your assessment in the following JSON format:
+
+If satisfied: {"result": "pass"}
+If not satisfied: {"result": "failed", "reason": "...."}
+
+Return only the JSON format as the result, with no additional explanation or information.
